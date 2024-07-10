@@ -1,0 +1,22 @@
+1. rent
+    1.1 id
+    1.2 date_time
+    1.3 price
+    1.4 full_name <- user 2.2
+    1.5 phone <- user 2.4
+    1.6 email <- user 2.5
+    1.7 data_passport <- user 2.6
+
+2. user
+    2.1 id
+    2.2 full_name
+    2.3 password
+    2.4 phone
+    2.5 email
+    2.6 data_passport
+    2.7 order <- order 3.1
+
+3. order
+    3.1 id
+    3.2 price <- rent 1.3
+    3.3 check

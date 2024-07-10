@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentVlg</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+        }
+        .profile-icon {
+            font-size: 1.5rem;
+        }
+        .content {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .content h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .content p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+<!-- Навигационное меню -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">RentVlg</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Заселение</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Куда сходить</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">О нас</a>
+                </li>
+            </ul>
+            <a class="nav-link profile-icon" href="#">
+                <i class="bi bi-person-circle"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Основной контент -->
+<div class="container content">
+    <h1>Добро пожаловать в RentVlg!</h1>
+    <p>Наши квартиры идеально подходят для краткосрочной аренды. У нас вы найдете уют и комфорт, которые сделают ваше пребывание незабываемым. Расположение наших квартир позволит вам легко добраться до всех главных достопримечательностей.</p>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
 </body>
 </html>

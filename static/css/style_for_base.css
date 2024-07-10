@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: rgb(81, 74, 74); /* Устанавливаем цвет фона для navbar */
+    margin: 0; /* Убираем отступы у navbar */
+    border: none; /* Убираем границы у navbar */
+    padding: 0; /* Убираем отступы у navbar */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}   
+
+.navbar-nav {
+    font-size: 1.1rem;
+    margin-right: 100px; /* Расстояние между элементами */
+    padding-right: 100px;
+}
+
+.profile-icon {
+    font-size: 1.5rem;
+}
+
+.container-fluid {
+    background-color: rgb(81, 74, 74);
+    padding-left: 30px; /* Расстояние слева */
+    padding-right: 30px; /* Расстояние справа */
+}
+
+.content {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
