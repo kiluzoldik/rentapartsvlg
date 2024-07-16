@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
 }
 
 .navbar {
@@ -8,6 +7,10 @@ body {
     margin: 0; /* Убираем отступы у navbar */
     border: none; /* Убираем границы у navbar */
     padding: 0; /* Убираем отступы у navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Чтобы меню было поверх других элементов */
 }
 
 .navbar-brand {
@@ -44,4 +47,109 @@ body {
 .content p {
     font-size: 1.2rem;
     color: #6c757d;
+}
+
+/* Стили для основного баннера */
+.jumbotron {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный слой для улучшения читаемости текста */
+}
+
+.jumbotron .display-4,
+.jumbotron .lead,
+.jumbotron .toggle-description {
+    z-index: 1;
+}
+
+.toggle-description {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Стили для описания квартиры */
+#apartment-description {
+    display: none;
+    padding: 2rem 0;
+}
+
+/* Стили для карусели */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Стили для страницы Заселения */
+#booking-form {
+    max-width: 600px;
+    margin: 0 auto 60px; /* Отступ снизу, чтобы кнопка не прилегала к футеру */
+}
+
+.card {
+    border: none;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+}
+
+.ui-datepicker-unselectable .ui-state-disabled {
+    text-decoration: line-through;
+    color: red !important;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.form-label {
+    color: black;
 }

@@ -1,0 +1,54 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Правила заселения</h1>
+    
+    <!-- Два столбца с правилами -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Основные правила:</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Заселение с 14:00 до 23:00.</li>
+                        <li class="list-group-item">Выселение до 12:00.</li>
+                        <li class="list-group-item">Запрещено курить в квартире.</li>
+                        <li class="list-group-item">Домашние животные не допускаются.</li>
+                        <li class="list-group-item">Соблюдать тишину с 22:00 до 7:00.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Дополнительные правила:</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Необходимо иметь при себе паспорт при заселении.</li>
+                        <li class="list-group-item">Запрещено устраивать вечеринки и мероприятия.</li>
+                        <li class="list-group-item">Квартира сдается только для проживания.</li>
+                        <li class="list-group-item">Необходимо поддерживать чистоту и порядок.</li>
+                        <li class="list-group-item">При обнаружении повреждений, сообщить владельцу.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Форма бронирования -->
+    <h2 class="text-center mt-5 mb-4">Форма бронирования</h2>
+    <form id="booking-form" class="p-4 bg-light rounded shadow-sm">
+        <div class="mb-3">
+            <label for="checkin-date" class="form-label">Дата заезда:</label>
+            <input type="text" class="form-control" id="checkin-date" name="checkin_date" required>
+        </div>
+        <div class="mb-3">
+            <label for="checkout-date" class="form-label">Дата выезда:</label>
+            <input type="text" class="form-control" id="checkout-date" name="checkout_date" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Забронировать</button>
+    </form>
+</div>
+{% endblock %}
