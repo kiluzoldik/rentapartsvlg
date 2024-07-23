@@ -46,13 +46,14 @@ body {
 
 .content p {
     font-size: 1.2rem;
-    color: #6c757d;
+    color: white;
 }
 
 /* Стили для основного баннера */
 .jumbotron {
+    margin-top: 50px;
     position: relative;
-    height: 100vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +68,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный слой для улучшения читаемости текста */
 }
 
 .jumbotron .display-4,
@@ -88,19 +88,6 @@ body {
     padding: 2rem 0;
 }
 
-/* Стили для карусели */
-.carousel-item img {
-    max-height: 500px;
-    object-fit: cover;
-}
-
-/* Стили для футера */
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 1rem 0;
-}
-
 footer p {
     margin: 0.5rem 0;
 }
@@ -113,23 +100,46 @@ body {
 
 /* Стили для страницы Заселения */
 #booking-form {
+    background-color: rgba(52, 58, 64, 0.8); /* #343a40 с прозрачностью 80% */
+    color: white; /* Чтобы текст был виден на темном фоне */
+    padding: 20px;
+    border-radius: 8px;
     max-width: 600px;
-    margin: 0 auto 60px; /* Отступ снизу, чтобы кнопка не прилегала к футеру */
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+#booking-form .form-label {
+    font-weight: bold;
+    color: white;
+}
+
+#booking-form .form-control {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    border: 1px solid #ccc;
+}
+
+#booking-form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#booking-form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
 .card {
     border: none;
-    background-color: #f8f9fa;
+    background-color: #343a40;
+    opacity: 0.8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-}
-
-.list-group-item {
-    background-color: #f8f9fa;
+    color: white;
 }
 
 .ui-datepicker-unselectable .ui-state-disabled {
@@ -152,4 +162,32 @@ footer p {
 
 .form-label {
     color: black;
+}
+
+.list-group-item {
+    background-color: #343a40;
+    opacity: 0.8;
+    color: white;
+}
+
+.container {
+    color: white;
+}
+
+#carouselWithCaptions {
+    max-width: 850px; /* Ширина карусели */
+    max-height: 650px; /* Высота карусели */
+    margin: 0 auto; /* Центрирование карусели */
+}
+
+#carouselWithCaptions .carousel-item img {
+    width: 100%;
+    height: auto; /* Сохранение пропорций изображения */
+    object-fit: contain; /* Адаптация изображения к размеру контейнера без обрезки */
+}
+
+.btn_after_carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }

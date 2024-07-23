@@ -39,7 +39,7 @@
     
     <!-- Форма бронирования -->
     <h2 class="text-center mt-5 mb-4">Форма бронирования</h2>
-    <form id="booking-form" class="p-4 bg-light rounded shadow-sm">
+    <form id="booking-form" class="rounded shadow-sm">
         <div class="mb-3">
             <label for="checkin-date" class="form-label">Дата заезда:</label>
             <input type="text" class="form-control" id="checkin-date" name="checkin_date" required>
@@ -48,7 +48,18 @@
             <label for="checkout-date" class="form-label">Дата выезда:</label>
             <input type="text" class="form-control" id="checkout-date" name="checkout_date" required>
         </div>
-        <button type="submit" class="btn btn-primary">Забронировать</button>
+        <div class="mb-3">
+            <label for="guests" class="form-label">Количество жителей:</label>
+            <select class="form-control" id="guests" name="guests" required>
+                <option value="1">1 человек</option>
+                <option value="2">2 человека</option>
+                <option value="3">3 человека</option>
+                <option value="4">4 человека</option>
+                <option value="5">5 человек</option>
+                <option value="6">6 человек</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Забронировать</button>
     </form>
 </div>
 {% endblock %}
