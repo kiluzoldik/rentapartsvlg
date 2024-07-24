@@ -1,0 +1,50 @@
+[
+    {
+        "model": "places.categories",
+        "pk": 2,
+        "fields": {
+            "name": "┬ёх ьхёЄр",
+            "slug": "all"
+        }
+    },
+    {
+        "model": "places.categories",
+        "pk": 3,
+        "fields": {
+            "name": "╩шэюЄхрЄЁ√",
+            "slug": "kinoteatry"
+        }
+    },
+    {
+        "model": "places.categories",
+        "pk": 4,
+        "fields": {
+            "name": "╠єчхш",
+            "slug": "muzei"
+        }
+    },
+    {
+        "model": "places.categories",
+        "pk": 5,
+        "fields": {
+            "name": "╧рЁъш",
+            "slug": "parki"
+        }
+    },
+    {
+        "model": "places.categories",
+        "pk": 6,
+        "fields": {
+            "name": "─юёЄюяЁшьхўрЄхы№эюёЄш",
+            "slug": "dostoprimechatelnosti"
+        }
+    },
+    {
+        "model": "places.categories",
+        "pk": 7,
+        "fields": {
+            "name": "╥юЁуют√х ЎхэЄЁ√",
+            "slug": "torgovye-centry"
+        }
+    }
+]

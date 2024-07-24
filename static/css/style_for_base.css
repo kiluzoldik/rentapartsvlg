@@ -191,3 +191,27 @@ footer p {
     justify-content: center;
     margin-top: 40px;
 }
+
+#card_place {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-right: 15px;
+    margin-left: 80px;
+    background-color: white;
+}
+
+.filter {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #718293;
+    border: 1px solid #718293;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: 55px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
