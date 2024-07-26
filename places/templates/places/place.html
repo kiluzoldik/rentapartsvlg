@@ -2,131 +2,39 @@
 {% load static %}
 
 {% block content %}
-<div class="full_cards">
-    <div class="row">
+<div class="row">
+    {% for place in places %}
         <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            {% if place.image %}
+                <img src="{{ place.image.url }}" class="card-img-top" alt="...">
+            {% endif %}
             <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
+                <h5 class="card-title">{{ place.name }}</h5>
+                <p class="card-text">{{ place.description }}</p>
+                <a href="{{ place.url }}" class="btn btn-dark">Ознакомиться</a>
             </div>
         </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
+    {% endfor %}
+    {% comment %} <div class="filter">
+        <h4>Фильтр</h4>
+        <form>
+            <div class="form-group">
+                <label for="category">Категории</label>
+                <select id="category" class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
             </div>
-        </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
+            <div class="form-group">
+                <label for="price-range">Ценовой диапазон</label>
+                <input type="range" class="form-control" id="price-range" min="0" max="1000">
             </div>
-        </div>
-        <div class="filter">
-            <h4>Фильтр</h4>
-            <form>
-                <div class="form-group">
-                    <label for="category">Категории</label>
-                    <select id="category" class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="price-range">Ценовой диапазон</label>
-                    <input type="range" class="form-control" id="price-range" min="0" max="1000">
-                </div>
-                <button type="submit" class="btn btn-dark">Применить</button>
-            </form>
-        </div>
-    </div>
-    <div class="row">
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-        <div id="card_place" class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Заголовок карточки</h5>
-                <p class="card-text">Несколько быстрых примеров текста для построения на основе заголовка карточек и составляющих основную часть содержимого карточки.</p>
-                <a href="#" class="btn btn-dark">Идти куда-нибудь</a>
-            </div>
-        </div>
-    </div>
+            <button type="submit" class="btn btn-dark">Применить</button>
+        </form>
+    </div> {% endcomment %}
 </div>
 {% endblock content %}

@@ -1,14 +1,14 @@
 from django.shortcuts import render
 
-from places.models import Categories
+from places.models import Places
 
 
 def categories(request):
     
-    categories = Categories.objects.all()
+    places = Places.objects.all()
 
     context = {
         'title': 'RentVlg - Куда сходить',
-        'content': categories,
+        'places': places,
     }
     return render(request, 'places/place.html', context)

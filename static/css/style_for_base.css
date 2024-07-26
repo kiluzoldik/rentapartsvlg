@@ -195,9 +195,25 @@ footer p {
 #card_place {
     margin-top: 80px;
     margin-bottom: 40px;
-    margin-right: 15px;
+    margin-right: 80px;
     margin-left: 80px;
-    background-color: white;
+    background-color: black;
+}
+
+#card_place img {
+    margin-top: 10px;
+}
+
+.card-body {
+    color: black;
+}
+
+.card-body a {
+    margin-left: 50px;
+}
+
+.card-body p {
+    color: white;
 }
 
 .filter {
