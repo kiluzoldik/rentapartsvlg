@@ -1,0 +1,99 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<form action="{% url "users:identification" %}" method="post">
+    {% csrf_token %}
+    <div class="identifier">
+        <h1>Основные данные</h1>
+        <div class="columns">
+            <div class="main-data">
+                <div class="text-field">
+                    <label class="text-field__label" for="full-name">ФИО арендатора:</label>
+                    <input type="text" id="full-name" name="full_name" class="text-field__input"
+                    value="{% if user.full_name %}{{ user.full_name }}{% endif %}">
+                    {% if form.full_name.errors %}
+                        <div id="error-popup" class="error-popup">
+                            <span class="error-popup__text">{{ form.full_name.errors|striptags }}</span>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="phone-number">Номер телефона:</label>
+                    <input class="text-field__input" name="phone_number" id="phone-number" type="text"
+                    value="{% if user.phone_number %}{{ user.phone_number }}{% endif %}">
+                    {% if form.phone_number.errors %}
+                    <div id="error-popup" class="error-popup">
+                        <span class="error-popup__text">{{ form.phone_number.errors|striptags }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="email">Email:</label>
+                    <input class="text-field__input" name="email" id="email" type="text"
+                    value="{% if user.email %}{{ user.email }}{% endif %}">
+                    {% if form.email.errors %}
+                    <div id="error-popup" class="error-popup">
+                        <span class="error-popup__text">{{ form.email.errors|striptags }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="birthday">Дата рождения:</label>
+                    <input class="text-field__input" name="birthday" id="birthday" type="text"
+                    value="{% if user.birthday %}{{ user.birthday }}{% endif %}">
+                    {% if form.birthday.errors %}
+                    <div id="error-popup" class="error-popup">
+                        <span class="error-popup__text">{{ form.birthday.errors|striptags }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="main-data">
+                <div class="text-field">
+                    <label class="text-field__label" for="series-and-number">Серия и номер паспорта (Раздельно):</label>
+                    <input class="text-field__input" type="text" name="series_and_number" id="series-and-number"
+                    value="{% if user.series_and_number %}{{ user.series_and_number }}{% endif %}">
+                    {% if form.series_and_number.errors %}
+                    <div id="error-popup" class="error-popup">
+                        <span class="error-popup__text">{{ form.series_and_number.errors|striptags }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="issued-by">Кем выдан паспорт:</label>
+                    <input class="text-field__input" name="issued_by" id="issued-by" type="text"
+                    value="{% if user.issued_by %}{{ user.issued_by }}{% endif %}">
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="date-of-issue">Дата выдачи паспорта:</label>
+                    <input class="text-field__input" name="date_of_issue" id="date-of-issue" type="text"
+                    value="{% if user.date_of_issue %}{{ user.date_of_issue }}{% endif %}">
+                    {% if form.date_of_issue.errors %}
+                    <div id="error-popup" class="error-popup">
+                        <span class="error-popup__text">{{ form.date_of_issue.errors|striptags }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="department-code">Код подразделения:</label>
+                    <input class="text-field__input" name="department_code" id="department-code" type="text"
+                    value="{% if user.department_code %}{{ user.department_code }}{% endif %}">
+                    {% if form.department_code.errors %}
+                    <div id="error-popup" class="error-popup">
+                        <span class="error-popup__text">{{ form.department_code.errors|striptags }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="text-field">
+                    <label class="text-field__label" for="registration-address">Адрес регистрации:</label>
+                    <input class="text-field__input" name="registration_address" id="registration-address" type="text"
+                    value="{% if user.registration_address %}{{ user.registration_address }}{% endif %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn-in-identificate">Сохранить изменения</button>
+</form>
+<script src="{% static "js/valid_window.js" %}"></script>
+{% endblock content %}

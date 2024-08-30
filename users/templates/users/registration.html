@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="wrapper">
+        <form action="{% url "users:registration" %}" method="post">
+            {% csrf_token %}
+            <h2>Регистрация</h2>
+            <div class="input-group">
+                <span class="icon">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <input type="text" name="username" placeholder="Имя пользователя" required
+                value="{% if form.username.value %}{{ form.username.value }}{% endif %}">
+            </div>
+            <div class="input-group">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" name="password1" placeholder="Пароль" required>
+                {% if form.password1.errors %}
+                <div class="alert alert-danger alert-dismissible fade show">{{form.password1.errors}}</div>
+                {% endif %}
+            </div>
+            <div class="input-group">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" name="password2" placeholder="Подтвердите пароль" required>
+                {% if form.password2.errors %}
+                <div class="alert alert-danger alert-dismissible fade show">{{form.password2.errors}}</div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn-in-login">Зарегистрироваться</button>
+        </form>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+{% endblock content %}

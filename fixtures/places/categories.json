@@ -3,7 +3,7 @@
         "model": "places.categories",
         "pk": 2,
         "fields": {
-            "name": "┬ёх ьхёЄр",
+            "name": "Все места",
             "slug": "all"
         }
     },
@@ -11,7 +11,7 @@
         "model": "places.categories",
         "pk": 3,
         "fields": {
-            "name": "╩шэюЄхрЄЁ√",
+            "name": "Кинотеатры",
             "slug": "kinoteatry"
         }
     },
@@ -19,7 +19,7 @@
         "model": "places.categories",
         "pk": 4,
         "fields": {
-            "name": "╠єчхш",
+            "name": "Музеи",
             "slug": "muzei"
         }
     },
@@ -27,7 +27,7 @@
         "model": "places.categories",
         "pk": 5,
         "fields": {
-            "name": "╧рЁъш",
+            "name": "Парки",
             "slug": "parki"
         }
     },
@@ -35,7 +35,7 @@
         "model": "places.categories",
         "pk": 6,
         "fields": {
-            "name": "─юёЄюяЁшьхўрЄхы№эюёЄш",
+            "name": "Достопримечательности",
             "slug": "dostoprimechatelnosti"
         }
     },
@@ -43,7 +43,7 @@
         "model": "places.categories",
         "pk": 7,
         "fields": {
-            "name": "╥юЁуют√х ЎхэЄЁ√",
+            "name": "Торговые центры",
             "slug": "torgovye-centry"
         }
     }

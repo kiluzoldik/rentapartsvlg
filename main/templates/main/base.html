@@ -1,4 +1,5 @@
 {% load static %}
+{% load places_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,16 +26,38 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url "rent:rent" %}">Заселение</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url "places:places" %}">Куда сходить</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">О нас</a>
-                </li>
+                <input type="checkbox" id="dropdown_places">
+                <label for="dropdown_places">
+                    <span>Куда сходить</span>
+                </label>
+                <div class="places-nav">
+                    <ul>
+                        {% tag_categories as categories %}
+                        {% for category in categories %}
+                            <a href="{% url "places:places" category.slug %}">{{ category.name }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
             </ul>
-            <a class="nav-link profile-icon" href="#">
-                <i class="bi bi-person-circle"></i>
-            </a>
+            <input type="checkbox" id="dropdown-person">
+            <label for="dropdown-person">
+                <img src="{% static "icons/person-fill.svg" %}"></img>
+            </label>
+            <div class="person-nav">
+                <ul>
+                    {% if not user.is_authenticated %}
+                        <a href="{% url "users:login" %}">Войти</a>
+                        <a href="{% url "users:registration" %}">Регистрация</a>
+                    {% endif %}
+                    {% if user.is_staff or user.is_admin %}
+                        <a href="{% url "admin:index" %}">Админ панель</a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        <a href="{% url "users:identification" %}">Идентификация</a>
+                        <a href="{% url "users:logout" %}">Выйти</a>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
@@ -51,15 +74,6 @@
     color: white;
     }
 </style>
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-        <p>Адрес: ул. Примерная, д. 1, Волгоград</p>
-        <p>Телефон: +7 123 456 7890</p>
-        <p>Email: info@rentvlg.ru</p>
-    </div>
-</footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>

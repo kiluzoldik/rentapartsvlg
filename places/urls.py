@@ -5,5 +5,5 @@ from places import views
 app_name = 'places'
 
 urlpatterns = [
-    path('', views.categories, name='places'),
+    path('/<slug:category_slug>/', views.categories, name='places'),
 ]

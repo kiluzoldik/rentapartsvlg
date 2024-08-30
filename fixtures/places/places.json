@@ -3,7 +3,7 @@
         "model": "places.places",
         "pk": 1,
         "fields": {
-            "name": "┬юЁю°шыютёъшщ",
+            "name": "Акварель",
             "description": "",
             "url": null,
             "image": "",
@@ -14,7 +14,7 @@
         "model": "places.places",
         "pk": 2,
         "fields": {
-            "name": "╠рЁьхырф",
+            "name": "Европа сити-мол",
             "description": "",
             "url": null,
             "image": "",
@@ -25,7 +25,7 @@
         "model": "places.places",
         "pk": 3,
         "fields": {
-            "name": "└ътрЁхы№",
+            "name": "Мармелад",
             "description": "",
             "url": null,
             "image": "",
@@ -36,7 +36,7 @@
         "model": "places.places",
         "pk": 4,
         "fields": {
-            "name": "5 чт╕чф",
+            "name": "5 звёзд",
             "description": "",
             "url": null,
             "image": "",
@@ -47,7 +47,7 @@
         "model": "places.places",
         "pk": 5,
         "fields": {
-            "name": "╩шэюьръё",
+            "name": "Киномакс",
             "description": "",
             "url": null,
             "image": "",
@@ -58,7 +58,7 @@
         "model": "places.places",
         "pk": 6,
         "fields": {
-            "name": "┼тЁюяр ёшЄш-ьюы",
+            "name": "Ворошиловский",
             "description": "",
             "url": null,
             "image": "",
@@ -91,7 +91,7 @@
         "model": "places.places",
         "pk": 9,
         "fields": {
-            "name": "╓╧╩ш╬",
+            "name": "ЦПКиО",
             "description": "",
             "url": "https://www.centralparkvlg.ru/",
             "image": "places_images/TSPKO.jpg",

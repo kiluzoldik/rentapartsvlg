@@ -10,8 +10,7 @@
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">{{ place.name }}</h5>
-                <p class="card-text">{{ place.description }}</p>
-                <a href="{{ place.url }}" class="btn btn-dark">Ознакомиться</a>
+                <a href="{{ place.url }}"><button class="btn-in-places">Ознакомиться</button></a>
             </div>
         </div>
     {% endfor %}

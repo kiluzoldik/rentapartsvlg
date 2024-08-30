@@ -16,7 +16,6 @@ class Categories(models.Model):
 
 class Places(models.Model):
     name = models.CharField(max_length=100, unique=True, verbose_name='Название')
-    description = models.TextField(blank=True, null=True, verbose_name='Описание')
     url = models.CharField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL адрес')
     image = models.ImageField(upload_to='places_images', blank=True, null=True, verbose_name='Изображение')
     category = models.ForeignKey(default='Все места',
